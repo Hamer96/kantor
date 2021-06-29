@@ -1,10 +1,15 @@
 
-<ul>
-  <li *ngFor="let x of rate">
-  {{x.currency}} albo {{x.code}}
-  {{x}}
-  </li>
+<div class="container container-fluid">
+<div class="baner nav-bar "> KANTOR</div>
+<div *ngFor="let x of rate">
 
 
+<div class="box row  col-lg-3 col-sm-6" *ngFor="let y of x.rates">
+    {{y.currency | uppercase}} {{y.code | uppercase}} <br>
+   {{y.bid}} {{y.ask}}
+</div>
+</div>
 
-</ul>
+
+</div>
+
